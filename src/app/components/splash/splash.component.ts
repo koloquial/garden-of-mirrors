@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./splash.component.css']
 })
 export class SplashComponent {
+  title = 'A Garden of Mirrors.'
 
+  traverse(){
+    console.log('traverse')
+  }
 }
