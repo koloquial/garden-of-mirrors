@@ -1,19 +1,24 @@
-<div style="
-    background-image: url(assets/image1.png);
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.4;
-    width: 100%;
-    height: 70%;
-"></div>
-
-<div id="text-container" style="padding: 20px;">
-    <h1>{{ title }}</h1>
-    <button (click)="traverse()">Traverse</button>
+<div 
+    id="image-container"
+    [ngStyle]="{'background-image': 'url(' + imageSource + ')'}"
+    style=" 
+        background-position: center top;
+        background-size: contain;
+        background-repeat: repeat-x;
+        opacity: .4;
+        height: 70%;
+    ">
 </div>
 
+<div 
+    id="text-container"
+    style="margin-left: 10px;
+">
+    <h1 *ngIf="textSource.length === 0">{{ title }}</h1>
 
+    <h2>{{ textSource }}</h2>
 
+   <button (click)="traverse()">{{ buttonSource }}</button>
+</div>
 
-
+ 
