@@ -7,11 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SplashComponent } from './components/splash/splash.component';
 
 import {MatButtonModule} from '@angular/material/button';
+import { FormatTxtPipe } from './pipes/format-txt.pipe';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SplashComponent
+    SplashComponent,
+    FormatTxtPipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

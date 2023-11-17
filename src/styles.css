@@ -10,25 +10,58 @@ body {
     background-color: #000000;
 }
 
-p, h1, h2, h3, h4, h5{
-    font-family: 'Lora', serif;
+p, h1, h2, h3, h4, h5, li{
+    letter-spacing: .2rem;   
+    line-height: 1.8;
     color: #ededed;
+    font-family: 'Lora', serif;
 }
 
 button{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: #e1e1e1;
+    border: 1px solid #e1e1e1;
     font-family: 'Lora', serif;
     padding: 5px 10px 5px 10px;
     font-size: large;
-    border: 0;
+    letter-spacing: .2rem;   
+    line-height: 1.8;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 button:hover{
     background-color: #e1e1e1;
+    color: black;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e1e1e1;
+  }
+
+  @media screen and (max-width: 600px) {
+    #image-container{
+        background-size: cover !important;
+    }
+}
+  
 
 
