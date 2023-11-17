@@ -9,7 +9,13 @@ body {
     background-color: #000000;
 }
 
-p, h1, h2, h3, h4, h5, li{
+h1{
+    letter-spacing: .2rem; 
+    color: #ededed;
+    font-family: 'Lora', serif !important; 
+}
+
+p, h2, h3, h4, h5, li{
     letter-spacing: .2rem;   
     line-height: 1.8;
     color: #ededed;

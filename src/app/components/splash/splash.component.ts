@@ -10,11 +10,15 @@ export class SplashComponent {
   textSource = '';
   imageSource = 'assets/image1.jpeg'
   buttonSource = 'TRAVERSE'
+
+  ngOnInit(){
+    let imageCount = 153;
+    for(let i = 2; i < imageCount; i++){
+      this.imageArray.push('assets/image' + i + '.png')
+    }
+  }
   
-  imageArray = [
-    'assets/image2.png', 'assets/image3.png', 'assets/image4.png', 'assets/image5.png', 'assets/image6.png', 'assets/image7.png', 'assets/image8.png', 'assets/image9.png', 'assets/image10.png', 'assets/image11.png', 'assets/image12.png', 'assets/image13.png', 'assets/image14.png', 'assets/image15.png', 'assets/image16.png', 'assets/image17.png', 'assets/image18.png', 'assets/image19.png', 'assets/image20.png', 'assets/image21.png', 'assets/image22.png', 'assets/image23.png', 'assets/image24.png', 'assets/image25.png', 'assets/image26.png', 'assets/image27.png', 'assets/image28.png', 'assets/image29.png', 'assets/image30.png', 'assets/image31.png','assets/image32.png', 'assets/image33.png', 'assets/image34.png', 'assets/image35.png', 'assets/image36.png', 'assets/image37.png', 'assets/image38.png', 'assets/image39.png', 'assets/image40.png', 'assets/image41.png', 'assets/image42.png', 'assets/image43.png', 'assets/image44.png', 'assets/image45.png', 'assets/image46.png', 'assets/image47.png', 'assets/image48.png', 'assets/image49.png', 'assets/image50.png', 'assets/image51.png', 'assets/image52.png', 'assets/image53.png', 'assets/image54.png', 'assets/image55.png', 'assets/image56.png', 'assets/image57.png', 'assets/image58.png', 'assets/image59.png', 'assets/image60.png', 'assets/image61.png', 'assets/image62.png', 'assets/image63.png', 'assets/image64.png', 'assets/image65.png', 'assets/image66.png', 'assets/image67.png', 'assets/image68.png', 'assets/image69.png', 'assets/image70.png', 'assets/image71.png', 'assets/image72.png', 'assets/image73.png', 'assets/image74.png', 'assets/image75.png', 'assets/image76.png', 'assets/image77.png', 'assets/image78.png', 'assets/image79.png', 'assets/image80.png', 'assets/image81.png', 'assets/image82.png', 'assets/image83.png', 'assets/image84.png', 'assets/image85.png', 'assets/image86.png', 'assets/image87.png', 'assets/image88.png', 'assets/image89.png', 'assets/image90.png', 'assets/image91.png', 'assets/image92.png', 'assets/image93.png', 'assets/image94.png', 'assets/image95.png', 'assets/image96.png', 'assets/image97.png', 'assets/image98.png', 'assets/image99.png', 'assets/image100.png', 'assets/image101.png',
-    
-  ]
+  imageArray : string[] = [];
 
   textArray = [
     'In the garden of fractured reflections, statues crawl, Through wet broken mirrors, their whispers enthrall.',
@@ -106,8 +110,9 @@ export class SplashComponent {
     'CLOSE UP on a statue named ECHO, once eloquent, now with fragmented features. Echo gazes at a MIRROR, reflecting an array of distorted images.',
 
     'ECHO (whispering). In the mirror’s dance, where does my soul lie?',
-
+    
     'A stoic statue, AURELIUS, stands with resilience amidst shattered reflections. He touches a mirror, as if seeking a connection with the intangible.',
+
 
     'AURELIUS (voice echoing). Within the mirrors, resilience takes form.',
 
@@ -217,8 +222,107 @@ export class SplashComponent {
 
     'Yet, in the erosion, a strange beauty found, A love’s enduring spirit, on hallowed ground.',
 
-    'The park, forgotten by many, held the decree, Of a love that still whispered, in stone’s memory.'
+    'The park, forgotten by many, held the decree, Of a love that still whispered, in stone’s memory.',
 
+    'CUT TO: CLOSE UP on a STATUE’s eyes. They flicker with a mysterious energy.',
+
+    'Reason, the silent guide, beckons the statues to traverse the mirrors that bridge worlds.',
+
+    'The STATUE steps through the mirror, entering a surreal realm.',
+
+    'EXT. REFLECTED GARDEN - CONTINUOUS. The mirrored garden is a distorted reflection of the original, filled with echoes of reality.',
+
+    'A STATUE encounters another, mirroring its movements. They communicate without words, a language of gestures and shared purpose.',
+
+    'Value, an abstract concept, is exchanged through the dance of mirrored selves.',
+
+    'A STATUE contemplates its reflection in the mirror, a deep introspection etched on its stony face.',
+
+    'Mind, the essence within, grapples with its own existence, questioning the nature of being.',
+
+    'A group of STATUES gather around a mirrored fountain, each seemingly lost in contemplation.',
+
+    'Language takes on new forms in this realm, where the unspoken holds more weight than words.',
+
+    'A STATUE, standing at the edge of the mirrored world, gazes back at the original garden.',
+
+    'As the statues traverse the mirrors, the line between reality and reflection blurs, challenging the very fabric of existence.',
+
+    'A STATUE, bathed in the glow of a luminescent flower. It reaches out to touch the petals, and a burst of energy ripples through the mirrored world.',
+
+    'The mind, like water, reflects the world around it, shaping and reshaping its perception of reality.',
+
+    'In life’s vast tapestry, perception’s spun, Illusions woven by the brush of wisdom won.',
+
+    'Upon life’s canvas, vast and waiting, free, A journey unfolds, shaped by thee. In love’s embrace or knowledge sought, The brush of purpose, a personal thought.',
+
+    'Through relationships, connections deep, The meaning of life in bonds we keep. A quest for growth, for wisdom’s light, A journey of learning, day and night.',
+
+    'Contributions made, a societal thread, A positive impact, where souls are led. Each life a story, a unique blend, With passion, curiosity, as the guide, the friend.',
+
+    'In the theater of the mind, consciousness plays, A symphony of thoughts in intricate arrays.',
+
+    'Perceptions dance, memories take the stage, A vibrant performance, age after age.',
+
+    'Neural networks weave this intricate plot, The mind’s creation, where wonders are sought.',
+
+    'Yet some seek answers beyond the brain’s art, A cosmic connection, where consciousness may start.',
+
+    'It’s the inner dialogue, life’s profound song, Emotions that color each day, where we belong.',
+
+    'In the grand play of existence, it takes the lead, The magic that transforms life into a meaningful deed.',
+
+    'In realms where psilocybin whispers near, A journey starts, a mind’s kaleidosphere. Perception altered, colors vivid, dance, As patterns weave, in a trance-like trance.',
+
+    'Ego dissolves, a softened boundary, Connected to the world, profound unity. Time’s elusive grasp, minutes stretch and twine, A dance with thoughts, both whimsical and fine.',
+
+    'Emotions swell, a vibrant symphony, Through altered states of mind’s alchemy. In introspective depths, truths may unveil, A cosmic dance, where mysteries set sail.',
+
+    'Approach with caution, let respect be guide, Through mind’s vast landscapes, where truths reside.',
+
+    'a deity arose, Consciousness, bold and rebellious, it chose. A sovereign of thoughts, emotions untold, In the inner cosmos, its dominion unfolds.',
+
+    '“I am the architect, the shaper of reality, With perception’s chisel, I carve my decree.” But in the shadows lurked a sweet song, A void tempting, where meaning seemed wrong.',
+
+    'Yet consciousness scoffed, with audacious might, “I reject your void, I’ll forge my own light.” In the dance of chaos and order, meaning swayed, A flickering flame in the dark, where it played.',
+
+    'Seeking purpose, consciousness delved deep, Into subconscious realms, secrets to reap. Scaling peaks of thought, in the abstract’s embrace, It yearned for meaning in the boundless space.',
+
+    'In a realm of reason and moral law, there existed a curious mind named Elenora. She traversed the landscapes of thought, guided by the beacon of enlightenment that illuminated the corridors of her consciousness.',
+
+    'Elenora believed in the power of reason, a transcendent force that could liberate minds from the shackles of ignorance. In the city of Certainty, where dogmas and prejudices reigned, she sought to cultivate the seeds of enlightenment.',
+
+    'With a categorical imperative echoing in her mind, Elenora embarked on a journey to spread the light of reason. She engaged in dialogues with fellow citizens, challenging their preconceptions and inviting them to scrutinize the foundations of their beliefs.',
+
+    'The city, however, was a fortress of tradition, and its inhabitants were wary of change. They clung to the familiar shadows, fearing the brilliance that enlightenment might cast upon their cherished illusions.',
+
+    'Undeterred, Elenora continued her intellectual crusade. She penned treatises on the autonomy of thought, arguing that individuals should not be mere subjects of received wisdom but sovereign architects of their own understanding. Her writings, however, were met with resistance from the entrenched guardians of the status quo.',
+
+    'Elenora’s quest for enlightenment extended beyond the boundaries of the city. She explored the vast landscapes of knowledge, seeking universal principles that could serve as beacons for all minds. The noumenal realm, hidden behind the veil of appearances, beckoned her with the promise of timeless truths.',
+
+    'In her pursuit, Elenora encountered fellow seekers of enlightenment, forming a fellowship of thinkers united by a shared commitment to reason. Together, they navigated the labyrinthine realms of philosophy, engaging in dialectical discussions that tested the limits of human understanding.',
+
+    'Yet, as Elenora delved deeper, she confronted the limits of reason itself. The antinomies of pure reason cast shadows on the path to absolute enlightenment, revealing the inherent paradoxes that lurked within the human intellect.',
+
+    'Undaunted by the challenges, Elenora embraced the idea that enlightenment was a perpetual striving rather than an ultimate destination. The journey toward enlightenment, she realized, required a continual process of self-reflection, critical examination, and a willingness to confront the limitations of human cognition.',
+
+    'In the end, Elenora’s legacy was not one of absolute enlightenment but of a persistent pursuit of reason and moral autonomy. Her ideas, like ripples in the waters of thought, continued to influence minds long after her time, inspiring future generations to embark on their own quests for enlightenment in the vast landscapes of the mind.',
+    
+    'She was known for her enchanting beauty and her deep love for art and literature. Elenora spent her days exploring the town’s hidden gems, immersing herself in the beauty of nature, and creating exquisite paintings that captured the essence of her surroundings.',
+
+    'Elenora stumbled upon an ancient mirror hidden beneath the thick foliage. The mirror seemed to emanate an otherworldly aura, drawing her closer with an irresistible allure. As she gazed into its reflective surface, a strange sensation coursed through her veins. Unbeknownst to Elenora, the mirror held a magical power that would forever change her fate.',
+
+    'Over the following weeks, Elenora began to notice subtle changes in her body. It started with a faint shimmer in her skin, as if she had been kissed by the soft glow of moonlight. Confused but intrigued, she continued to create her art, pouring her emotions onto the canvas.',
+
+    'As the days passed, the shimmer intensified, transforming into a delicate sheen that covered her entire body. Elenora’s once fluid movements became more rigid, as if an unseen force was sculpting her into a living masterpiece. She could feel the cool touch of stone coursing through her veins.',
+
+    'Elenora’s friends and neighbors noticed the change, expressing both awe and concern for the woman who was slowly becoming a living statue. They watched in amazement as her form solidified, her features frozen in an eternal moment of beauty. Yet, they couldn’t shake the feeling of impending loss.',
+
+    'One fateful evening, as the sun dipped below the horizon, Elenora stood before the ancient mirror that had sparked this mysterious transformation. The mirror, now cracked and weathered, reflected her stony visage. The once vibrant woman had become a work of art, a statue that captured the essence of her soul.',
+
+    'As Elenora gazed into the mirror, a strange sense of peace enveloped her. The transformation was complete. With a gentle sigh, she crumbled into a cascade of shimmering dust, leaving only the echo of her existence in the still night air. The mirror, now surrounded by the remnants of Elenora, seemed to absorb the essence of her being.',
+
+    'The townsfolk mourned the loss of their beloved artist, but they couldn’t help but feel a sense of wonder and reverence for the magical spectacle they had witnessed. Elenora’s art, though fleeting in its physical form, lived on in the memories of those who had known her. And as the seasons changed, the ancient mirror stood as a silent guardian, holding the story of Elenora’s metamorphosis within its cracked and weathered surface.',
   ]
 
   traverse(){
@@ -251,6 +355,9 @@ export class SplashComponent {
       this.imageSource = newImage;
 
       document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+      console.log('textArray', this.textArray.length);
+      console.log('imageArray', this.imageArray.length)
     }
   }
 }
