@@ -23,7 +23,7 @@
 
     <div style="width: 100%; text-align: center; margin: 0;">
         <button *ngIf='buttonSource.length > 0' (click)="traverse()">{{ buttonSource }}</button>
-        <!-- <button *ngIf="textSource.length <= 0" routerLink='/about'>ABOUT</button> -->
+        <button *ngIf="textSource.length <= 0" routerLink='/about'>ABOUT</button>
     </div>
     <br /><br />
     <div *ngIf="textSource.length <= 0" style="float: right"><p>v.1 &nbsp;&nbsp;</p></div>
