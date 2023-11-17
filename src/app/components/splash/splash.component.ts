@@ -103,7 +103,7 @@ export class SplashComponent {
 
     'A moonlit garden with statues standing in silent contemplation. The air is filled with a mystical aura as the statues come to life, their eyes filled with an otherworldly glow.',
 
-    'CLOSE UP on a statue named ECHO, once eloquent, now with fragmented features. Echo gazes at a MIRROR, reflecting a myriad of distorted images.',
+    'CLOSE UP on a statue named ECHO, once eloquent, now with fragmented features. Echo gazes at a MIRROR, reflecting an array of distorted images.',
 
     'ECHO (whispering). In the mirror’s dance, where does my soul lie?',
 
@@ -155,9 +155,9 @@ export class SplashComponent {
 
     'NIMBLE NYMPH (CONT’D)(whispering). A dance with words, where fiction and reality entwine.',
 
-    'Suddenly, the mirrors within the library begin to reflect the stories in kaleidoscopic patterns, creating a mesmerizing display of literary worlds. The Nymph continues her journey, now accompanied by the reflections of her own movements.',
+    'Suddenly, the mirrors within the library begin to reflect the stories in geometric patterns, creating a mesmerizing display of literary worlds. The Nymph continues her journey, now accompanied by the reflections of her own movements.',
 
-    'NIMBLE NYMPH (CONT’D) (lost in thought) In the mirrors, a kaleidoscope of possibilities, where every turn reveals a new facet of the narrative.',
+    'NIMBLE NYMPH (CONT’D) (lost in thought) In the mirrors, a puzzle of possibilities, where every turn reveals a new facet of the narrative.',
 
     'The Nymph reaches the heart of the library, where a pedestal holds a book with a shimmering cover. She opens it, and a brilliant light spills forth, enveloping her in a cascade of words.',
 
