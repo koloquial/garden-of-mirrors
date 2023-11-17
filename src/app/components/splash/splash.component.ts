@@ -225,14 +225,12 @@ export class SplashComponent {
 
     if(this.textArray.length <= 0){
       this.textSource = 'FADE OUT.'
-      this.imageSource = 'assets/image1.jpeg';
+      this.imageSource = 'assets/about.png';
+      this.buttonSource = ''
     }else{
       let randomText = Math.floor(Math.random() * this.textArray.length);
       let newText = this.textArray[randomText];
       this.textArray.splice(randomText, 1);
-  
-      console.log('IMAGE LENGTH:', this.imageArray.length);
-      console.log('TEXT LENGTH:', this.textArray.length);
   
       let valid = false;
       let randomButton = 0;
@@ -251,6 +249,8 @@ export class SplashComponent {
       
       this.textSource = newText;
       this.imageSource = newImage;
+
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
   }
 }
