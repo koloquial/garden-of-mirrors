@@ -22,8 +22,11 @@
     </div>
 
     <div style="width: 100%; text-align: center; margin: 0;">
-        <button *ngIf='buttonSource.length > 0' (click)="traverse()">{{ buttonSource }}</button>
+        <button *ngIf='buttonSource.length > 0' (click)="resetBook; traverse();">{{ buttonSource }}</button>
+        <button *ngIf="continueBook === true && textSource.length <= 0" (click)="traverse()">CONTINUE</button>
+        <button *ngIf="continueBook === true && textSource.length <= 0" (click)="delete()">REMOVE BOOKMARK</button>
         <button *ngIf="textSource.length <= 0" routerLink='/about'>ABOUT</button>
+        <button *ngIf="textArray.length < 0" (click)="endBook()">END</button>
     </div>
     <br /><br />
     <div style="width: 100%; text-align: center; margin: 0;">

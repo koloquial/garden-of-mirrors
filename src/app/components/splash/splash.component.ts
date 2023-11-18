@@ -10,12 +10,39 @@ export class SplashComponent {
   textSource = '';
   imageSource = 'assets/image1.jpeg'
   buttonSource = 'TRAVERSE'
+  continueBook = false;
 
-  ngOnInit(){
-    let imageCount = 153;
+  resetBook(){
+    let imageCount = 220;
     for(let i = 2; i < imageCount; i++){
       this.imageArray.push('assets/image' + i + '.png')
     }
+  }
+
+  ngOnInit(){
+    try{
+      let temp = JSON.parse(localStorage.getItem('garden-of-mirrors') || '{}');
+
+      if(Object.keys(temp).length > 0){
+        this.imageArray = temp.images;
+        this.textArray = temp.text;
+        this.continueBook = true;
+      }else{
+        this.resetBook();
+      }
+    }catch(e){
+      console.log('e', e)
+    }
+  }
+
+  delete(){
+    localStorage.removeItem('garden-of-mirrors');
+    this.continueBook = false;
+  }
+
+  endBook(){
+    this.delete();
+    this.resetBook();
   }
   
   imageArray : string[] = [];
@@ -323,6 +350,146 @@ export class SplashComponent {
     'As Elenora gazed into the mirror, a strange sense of peace enveloped her. The transformation was complete. With a gentle sigh, she crumbled into a cascade of shimmering dust, leaving only the echo of her existence in the still night air. The mirror, now surrounded by the remnants of Elenora, seemed to absorb the essence of her being.',
 
     'The townsfolk mourned the loss of their beloved artist, but they couldn’t help but feel a sense of wonder and reverence for the magical spectacle they had witnessed. Elenora’s art, though fleeting in its physical form, lived on in the memories of those who had known her. And as the seasons changed, the ancient mirror stood as a silent guardian, holding the story of Elenora’s metamorphosis within its cracked and weathered surface.',
+
+    'Once upon an enigmatic midnight dreary, a curious soul delved into realms unforeseen, driven by a yearning to fathom the eldritch metamorphosis from mortal clay to stony sentinel.',
+    
+    'In the chamber of the arcane, amidst flickering spectral flames, the seeker gathered empirical fragments—a curious amalgamation of lore and lithic secrets. A tome, hoary and bound in the shadows of forgotten epochs, whispered cryptic verses to the inquisitive mind.',
+
+    'First, the human, in ephemeral flesh enshrined, must traverse the corridors of temporal alchemy. Through the crucible of time’s relentless grasp, the essence transmutes, shedding the vestiges of transient vitality. A spectral dance with eternity ensues, a macabre ballet in the shadows of cosmic indifference.',
+
+    'The alchemical symphony orchestrates the transubstantiation, weaving the strands of mortal coil into the fabric of enduring stone. A morose minuet of calcification, as the essence weaves through sinew and bone, leaving behind a vestige, a pale echo in the gallery of mortal residue.',
+
+    'The arcane geometry of metamorphosis unfolds in tandem with the celestial choreography. Stellar influences, unseen by mortal gaze, imprint upon the nascent statue-to-be. Constellations conspire in silent collusion, etching destiny upon the cold visage of petrified fate.',
+
+    'As the lunar pendulum swings, a spectral latticework emerges—a nexus of ethereal resonance that anchors the formless yearning to the immutable obelisk. The heart, once pulsating with warmth, now beats in silent cadence within the stony breast, a testament to the transmutation of mortal essence into the enduring embrace of eternity.',
+
+    'Thus, in the crucible of cosmic sorcery, the metamorphosis unfolds—a magnum opus of spectral transfiguration. The human, once a fleeting vessel of mortal musings, now stands as a testament to the ineffable dance between life’s ephemeral enigma and the immutable permanence of a statue’s silent repose.',
+
+    'In a garden of mirrors, ’neath the moon’s soft glow, A mortal steps forth, where enchantments flow.',
+
+    'Robed in twilight hues, a sorcerer’s delight, Spellbound incantations weave through the night.',
+
+    'Mirrors shimmer, portals to realms unknown, Reflections dance, in moonlight they’re sown.',
+
+    'Eyes become orbs, capturing wisdom untold, A living statue, in moonlit gold.',
+
+    'Frozen in time, a testament divine, In the Garden of Mirrors, where enchantments entwine.',
+
+    'EXT. ENCHANTED GARDEN - DAY. A lush garden, bathed in the soft glow of dappled sunlight. Overgrown vines weave through the surroundings, embracing a weathered statue half-emerging from a mystical mirror.',
+
+    'ANGLE ON: THE STATUE. Carved from an otherworldly stone, the figure is of a maiden, frozen in elegance and decay. Cracks mar the once pristine surface, and moss clings to the delicate features.',
+
+    'The vines, thick and rampant, snake around the maiden, as if reclaiming her from the passage of time. Blossoms bloom in bursts of color, a stark contrast to the aged stone.',
+
+    'ANGLE ON: THE MYSTERIOUS MIRROR.  The mirror, framed with intricate patterns, is a portal between realms. It reflects a distorted, dreamlike version of the garden, enhancing its magical allure.',
+
+    'ANGLE ON: THE LIGHT. Shafts of sunlight pierce through the dense foliage.',
+
+    'CLOSER ON: THE CRUMBLING DETAILS. Chunks of stone fall, echoing the gradual erosion of the statue’s form. A sense of melancholy permeates the air as the once-proud sculpture succumbs to the relentless embrace of nature.',
+
+    'ANGLE ON: THE SURROUNDINGS. The garden, a forgotten realm suspended in time, holds an air of both enchantment and desolation. Ancient trees whisper forgotten tales as the wind rustles through the overgrown foliage.',
+
+    'In the forsaken garden, where time and neglect have embraced, Ivy and moss, silent witnesses, weave tales of yesteryears erased. Statues, once proud, stand as remnants, fractured and worn, Their outstretched arms, a plea for an era reborn.',
+
+    'Amidst the decay, a shattered looking glass rests on the ground, A splintered soul within, reflections of a haunting sound. In its broken shards, a portal to a reality untold, Where echoes of the past in cryptic whispers unfold.',
+
+    'Beneath the overgrown canopy of forgotten tomes, A labyrinth of knowledge, where nature’s reclaiming roams. Murmurs resonate from the leaves, a chorus of the past,Each footfall, an odyssey through time’s shadow cast.',
+
+    'Mirrors scattered like silver petals in the luxuriant air, Conduits to realms where truth and illusion pair. As zephyrs weave through foliage, reflections come alive, Phantom silhouettes dance, the garden’s secrets to derive.',
+
+    'Illusions, relentless, entwine the wanderer’s soul, In the mirror’s embrace, ancient stories take their toll.  from bygone epochs, twisted and distressed, Whisper forgotten truths, a hauntingly divine jest.',
+
+    'Oh, garden of decay, where enigmas find their home, A phantasmagoria unfolds, unknown as dear unknown. In the fractured mirror’s gaze, a disquieting beauty unfurls, An ode to crumbled statues and a garden of lost pearls.',
+    
+    'Upon the stairs of marble cold and bright, A liquid ribbon dances with delight. Each step adorned with sheen of crystal clear, As water falls, a cascade to endear.',
+
+    'In droplets, diamonds, light begins to play, A symphony of liquid notes at play. The fragrance of damp air, a subtle cue, Refreshes senses, whispers nature’s dew.',
+    
+    'As shadows dance upon the hardened ground, A juxtaposition, both soft and sound. The steps, unyielding, meet the water’s grace, In harmony, a liquid, sweet embrace.',
+
+    'Upon the fountain, time-worn stone so fair, A wild ivy embraces with leafy care.',
+
+    'Its tendrils reach, with an untamed grace, Winding, dancing, a green and vibrant embrace.',
+
+    'Carvings of artisans, forgotten in the past, Now peek through leaves, a memory cast.',
+
+    'Emerald leaves, a living, lush attire, Softening the stone with nature’s gentle fire.',
+
+    'Sunlight plays upon the verdant green, Translucent leaves in a dappled sheen.',
+
+    'Cherub faces and spouts, a hidden charm, Transformed by ivy’s organic disarm.',
+
+    'Droplets linger, on leaves they cling, Liquid jewels in the embrace of spring.',
+
+    'Earth’s scent and blooms in the air, A story woven, in this ivy-covered lair.',
+
+    'In morning’s light, time wakes with hues so fair, A river’s flow, relentless in its care. Each second ticks, a heartbeat’s rhythmic song, As shadows dance, elongated and strong.',
+
+    'Midday arrives, a force both bright and clear, Sharp seconds etch themselves, crystal and sheer. Afternoon softens, with a golden grace, As shadows lengthen in the day’s embrace.',
+
+    'Sunset, a masterpiece in fiery art, The world holds its breath, time plays its part. The night unfolds, a silent, starry sea, Moon marks the hours in celestial glee.',
+
+    'In the recesses of the mind, a river of thought does wind, Consciousness, a liquid flow, elusive, profound, undefined.',
+
+    'Like water it slips through reason’s cracks, Pooling in shadows, where introspection tracks.',
+
+    'Subconscious depths, an abyssal sea, Emotions stir, a tempest in me.',
+
+    'Adapting, molding, to perception’s form, A torrent of ideas, a cerebral storm.',
+
+    'Moonlit chambers of contemplation’s grace, Reflecting dreams in consciousness’ embrace.',
+
+    'Chiaroscuro emotions, a palette divine, Painting the canvas with joy and sorrow entwined, Oh, haunted corridors, where regrets softly tread, Echoes of bygone whispers, where the soul is led.',
+
+    'In the alchemy of time, where patience meets persistence, Stone succumbs to the subtle art of erosion’s insistence. A dance between elements, a slow and silent fray, As nature, with gentle hands, sculpts in a patient ballet.',
+
+    'Raindrops, like celestial artisans, descend from the sky, Their touch, a delicate caress, as they gracefully fly. Each drop a sculptor’s chisel, a messenger of change, Wearing away the stone, in a rhythm both quiet and strange.',
+
+    'Wind, a sculptor of whispers, whispers through the ages, Carrying grains of time, as it weaves through rock’s pages. A soft abrasion, a tender kiss, as it carries the weight, Eroding the surface, shaping destiny’s silent fate.',
+
+    'Time, the master craftsman, with its relentless stride, Leaves no stone untouched, no fortress to hide. A slow metamorphosis, as centuries pass by, From rugged rock to grains of sand, under the vast sky.',
+    
+    'Does the spirit linger in the stony cocoon, A prisoner of the earth, under the spectral moon? Or does it transcend the confines of the mineral shell, To wander the ethereal realms, a ghostly farewell?',
+
+    'No longer the vessel of mortal desires and whims, But a statue, frozen in time, where the arcane hymns Of an unseen choir sing a dirge for the animate, As the soul grapples with its stone-carved fate.',
+
+    'The essence within, once a flame of life’s fire, Now imprisoned, encased in a mineral attire. In the stillness of petrification, a silent scream, The soul’s lament echoes through an otherworldly dream.',
+
+    'In the pallid grip of an otherworldly enchantment, The soul, a captive bird in a stone-wrought confinement. As the body morphs to cold and unyielding rock, A metamorphosis profound, in the realm of the arcane clock.',
+
+    'The NYMPH possessed a secret longing that transcended its stony form. It harbored a fervent desire to shed the rigid confines of its sculpted existence and taste the ephemeral essence of humanity, again.',
+
+    'One fateful night, as the silver moon hung low in the sky, a mysterious enchantment descended upon the garden. A spectral mist, ethereal and enticing, beckoned the NYMPH to life. With a tremor that resonated through its cold form, the statue awoke to the haunting melody of the garden’s nocturnal symphony once more.',
+
+    'In the first mirror, it saw glimpses of the vibrant tapestry of joy and sorrow. The statue, captivated by the emotions, pressed on to the next reflective surface. In the second mirror, it witnessed chaos, where life pulsed with the rhythm of existence.',
+
+    'The garden of mirrors unfolded like an ever-shifting labyrinth, each reflection revealing a facet of the human experience. The statue moved through scenes of love and loss, laughter and tears, until it stood before a mirror that held the reflection of a living, breathing person—an image so tantalizingly close yet agonizingly distant.',
+
+    'With a determined heart, the NYMPH stepped into mirror after mirror, and the world around it dissolved. As it emerged on the other side, the stone yielded to flesh, and the statue transformed into a being of warmth and life... but it was just an illusion.',
+
+    'In the realm of stone, where time takes its toll, Weathering whispers, as freeze and thaw unroll.',
+
+    'Erosion dances with wind and rain’s embrace, Carving tales on surfaces, leaving its trace.',
+
+    'Microbial forces, lichens, and moss, Biological rhythms, a subtle, silent gloss.',
+
+    'Pollution’s acidic breath, a corrosive kiss, Stone weathers under its chemical abyss.',
+
+    'Salt-laden breezes from the ocean’s spray,Crystallizing within, a slow decay.',
+
+    'Abrasion marks the passage of countless feet, A dance of erosion on pathways and street.',
+
+    'In the furnace of fire, stones may crack, Thermal shocks, a searing attack.',
+
+    'Chemicals wield their transformative might, Dissolving, altering, in the silent night.',
+
+    'Maintenance neglected, a crucial art, Accumulated neglect, a corrosive start.',
+
+    'Subsurface secrets, geological song, Influencing stability, lasting or prolonged.',
+
+    'Preservation’s dance, a delicate chore, Guarding the stones, forevermore.',
+    
+    'The statue’s silhouette captures a dynamic stillness, a moment suspended in time where movement and serenity coalesce. Shadows play upon the contours, accentuating the depth and texture of the marble, while the interplay of light creates a nuanced chiaroscuro that brings the figure to life.'
   ]
 
   traverse(){
@@ -356,8 +523,15 @@ export class SplashComponent {
 
       document.body.scrollTop = document.documentElement.scrollTop = 0;
 
+      let store = {
+        images: this.imageArray,
+        text: this.textArray
+      }
+
+      localStorage.setItem('garden-of-mirrors', JSON.stringify(store));
+
       console.log('textArray', this.textArray.length);
-      console.log('imageArray', this.imageArray.length)
+      console.log('imageArray', this.imageArray.length);
     }
   }
 }
