@@ -30,7 +30,8 @@
     </div>
     <br /><br />
     <div style="width: 100%; text-align: center; margin: 0;">
-        <div *ngIf="textSource.length <= 0"><p>v.1 &nbsp;&nbsp;</p></div>
+        <div *ngIf="textSource.length <= 0"><p>v.1</p></div>
+        <div *ngIf="textSource.length > 0"><p>{{ textArray.length }} remains</p></div>
     </div>
 </div>
 
