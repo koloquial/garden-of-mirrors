@@ -13,7 +13,7 @@ export class SplashComponent {
   continueBook = false;
 
   resetBook(){
-    let imageCount = 220;
+    let imageCount = 223;
     for(let i = 2; i < imageCount; i++){
       this.imageArray.push('assets/image' + i + '.png')
     }
@@ -43,6 +43,8 @@ export class SplashComponent {
   endBook(){
     this.delete();
     this.resetBook();
+    this.textSource = '';
+    this.buttonSource = 'TRAVERSE'
   }
   
   imageArray : string[] = [];
